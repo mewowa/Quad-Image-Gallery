@@ -15,17 +15,44 @@
 			box-shadow: 0 0 12px rgba(0,0,0,0.8);
 		}
 		div#quad figure { 
-  			margin: 0; width: 50%; 
-  			height: auto; transition: 1s; 
+  			margin: 0;
+  			width: 50%; 
+  			height: auto;
+  			transition: 1s;
+  			webkit-transition: 1s;
   			display: inline-block; 
   			position: relative; overflow: hidden; 
 		}
 		div#quad figure:hover { cursor: pointer; z-index: 4; }
 		div#quad figure img { width: 100%; height: auto; }
-		div#quad figure:nth-child(1) { transform-origin: top left; }
-		div#quad figure:nth-child(2) { transform-origin: top right; }
-		div#quad figure:nth-child(3) { transform-origin: bottom left; }
-		div#quad figure:nth-child(4) { transform-origin: bottom right; }
+		div#quad figure:nth-child(1) {
+			-webkit-transform-origin: top left;
+			-moz-transform-origin: top left;
+			-ms-transform-origin: top left;
+			-o-transform-origin: top left;
+			transform-origin: top left;
+		}
+		div#quad figure:nth-child(2) {
+			-webkit-transform-origin: top right;
+			-moz-transform-origin: top right;
+			-ms-transform-origin: top right;
+			-o-transform-origin: top right;
+			transform-origin: top right;
+		}
+		div#quad figure:nth-child(3) {
+			-webkit-transform-origin: bottom left;
+			-moz-transform-origin: bottom left;
+			-ms-transform-origin: bottom left;
+			-o-transform-origin: bottom left;
+			transform-origin: bottom left;
+		}
+		div#quad figure:nth-child(4) {
+			-webkit-transform-origin: bottom right;
+			-moz-transform-origin: bottom right;
+			-ms-transform-origin: bottom right;
+			-o-transform-origin: bottom right;
+			transform-origin: bottom right;
+		}
 		div#quad figure figcaption { 
   			margin: 0; opacity: 0; 
   			background: rgba(0,0,0,0.3); 
@@ -35,7 +62,13 @@
   			bottom: 0; width: 100%;
 			transition: 1s 1s opacity; 
 		}
-		.expanded { transform: scale(2); z-index: 5;  }
+		.expanded {
+			-webkit-transform: scale(2); z-index: 5;
+			-moz-transform: scale(2); z-index: 5;
+			-ms-transform: scale(2); z-index: 5;
+			-o-transform: scale(2); z-index: 5;
+			transform: scale(2); z-index: 5;
+		}
 		div#quad figure.expanded figcaption { opacity: 1; }
 		div.full figure:not(.expanded) { pointer-events: none; }
 	</style>
